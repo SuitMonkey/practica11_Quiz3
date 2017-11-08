@@ -22,7 +22,7 @@
     </div>
     <div class="mdl-card__actions mdl-card--border">
         <a href="/" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-            Return to the Jedi path
+            Return
         </a>
     </div>
 

@@ -20,7 +20,11 @@ public class ClientService {
 
     // Core Functions
     public void registerNewClient(String identificationNumber, String firstName, String lastName, String telephone, String address){
-        clientRepository.save(new Client(identificationNumber, firstName, lastName, telephone, address));
+        clientRepository.save(new Client(identificationNumber, firstName, lastName, telephone, address,null));
+    }
+
+    public void editClient(Client client){
+        clientRepository.save(client);
     }
 
     public Client findClient(String identificationNumber){
