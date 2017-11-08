@@ -1,6 +1,3 @@
-/**
- * Created by Djidjelly Siclait on 10/5/2016.
- */
 package edu.pucmm.practica11_Quiz3.modelo;
 
 import lombok.Data;

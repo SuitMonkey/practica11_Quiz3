@@ -1,6 +1,3 @@
-/**
- * Created by Djidjelly Siclait on 10/12/2016.
- */
 package edu.pucmm.practica11_Quiz3.controller;
 
 

@@ -23,19 +23,21 @@ public class User implements Serializable{
     private String lastName;
     @Column(name = "pass")
     private String password;
-    @Column(name = "permission")
-    private boolean admin;
+    private boolean active;
+    private String role;
 
     // Constuctors
     public User(){
 
     }
 
-    public User(String username, String firstName, String lastName, String password, boolean admin){
+    public User(String username, String firstName, String lastName, String password, boolean active, String role){
         this.setUsername(username);
         this.setFirstName(firstName);
         this.setLastName(lastName);
-        this.setAdmin(admin);
+        this.setPassword(password);
+        this.setActive(true);
+        this.setRole(role);
     }
 
 }

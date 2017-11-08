@@ -1,9 +1,11 @@
 package edu.pucmm.practica11_Quiz3.service;
 
 
+import edu.pucmm.practica11_Quiz3.config.SecurityConfig;
 import edu.pucmm.practica11_Quiz3.modelo.User;
 import edu.pucmm.practica11_Quiz3.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,20 +27,14 @@ public class UserService {
         if(isUsernameTaken(username))
             throw new IllegalArgumentException("\n\nThe user name: " + username + " is already taken");
         else
-            userRepository.save(new User(username, firstName, lastName, password, false));
+            userRepository.save(new User(username, firstName, lastName, password, true, "USER"));
+
     }
 
     public void deleteUserAccount(String username){
         userRepository.delete(userRepository.findByUsername(username));
     }
 
-    public void makeUserAdmin(String username){
-        User user = userRepository.findByUsername(username);
-        if(!user.isAdmin()){
-            user.setAdmin(true);
-            userRepository.save(user);
-        }
-    }
 
     public List<User> findAllUsers(){
         return userRepository.findAll();

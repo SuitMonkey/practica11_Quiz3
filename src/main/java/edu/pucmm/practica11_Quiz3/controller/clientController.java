@@ -1,6 +1,5 @@
 package edu.pucmm.practica11_Quiz3.controller;
 
-
 import edu.pucmm.practica11_Quiz3.modelo.Rent;
 import edu.pucmm.practica11_Quiz3.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,9 +13,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
-/**
- * Created by Eduardo veras on 06-Oct-16.
- */
 @Controller
 public class clientController {
 

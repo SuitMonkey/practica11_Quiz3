@@ -27,7 +27,6 @@ public class registerController {
         return new ModelAndView("register");
     }
 
-    @Secured("ADMIN")
     @PostMapping("/addNewUserAccount")
     public String addNewUser(@RequestParam("username") String username, @RequestParam("first") String first, @RequestParam("last") String last, @RequestParam("pass") String pass){
 
