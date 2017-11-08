@@ -31,7 +31,6 @@ public class EquipmentController {
     }
 
 
-    @Secured("ADMIN")
     @PostMapping("/addNewEquipment")
     public String newEquipment(@RequestParam("name") String name, @RequestParam("subfamily") String subFamily, @RequestParam("stock") Integer stock, @RequestParam("file") MultipartFile file){
 

@@ -38,7 +38,6 @@ public class clientController {
         return new ModelAndView("clientview");
     }
 
-    @Secured("ADMIN")
     @PostMapping("/addNewClient")
     public String newClientSubmit(@RequestParam("id") String id, @RequestParam("first") String first, @RequestParam("last") String last, @RequestParam("tel") String tel, @RequestParam("add") String add){
 

@@ -22,8 +22,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter implements Appl
         http.csrf().disable();
         http.authorizeRequests()
                 .antMatchers("/","/css/**", "/js/**","/static/**").permitAll() //permitiendo llamadas a esas urls.
-                .antMatchers("/addNewUserAccount/**").hasAnyRole("ADMIN", "USER")
-                .antMatchers("/Users/**").hasAnyRole("ADMIN", "USER")
+                .antMatchers("/addNewUserAccount/**","/addNewClient/**").hasAnyRole("ADMIN")
+                .antMatchers("/Users/**").hasAnyRole("ADMIN")
                 .antMatchers("/dbconsole/**").permitAll()
                 .and()
                 .formLogin()
